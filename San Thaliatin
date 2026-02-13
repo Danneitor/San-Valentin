@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>San Valentín ❤️</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Inicializando sistema...</h1>
+  <p>Analizando recuerdos contigo...</p>
+  <p>Procesando sonrisas...</p>
+
+  <button onclick="mostrarPregunta()">Continuar 💖</button>
+
+  <div id="pregunta" class="hidden">
+    <h2>Resultado: 100% compatible 💘</h2>
+    <p>Se detectó un pequeño error en el sistema...</p>
+    <h2>¿Quieres ser mi San Valentín? ❤️</h2>
+
+    <button class="yes" onclick="window.location.href='https://youtube.com/shorts/VXi33uUr-Ws'">Sí 💕</button>
+    <button class="yes" onclick="window.location.href='https://youtube.com/shorts/VXi33uUr-Ws'">Obvio que sí 😌</button>
+  </div>
+
+  <div id="final" class="hidden">
+    <h2>Confirmación recibida ❤️</h2>
+    <p>Gracias por hacerme el más feliz.</p>
+    <p>Prometo que será inolvidable contigo.</p>
+  </div>
+
+  <script>
+    function mostrarPregunta() {
+      document.getElementById("pregunta").classList.remove("hidden");
+    }
+
+    function aceptado() {
+      document.getElementById("final").classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
