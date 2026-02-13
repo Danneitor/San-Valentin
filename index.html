@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Feliz San Valentín ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff4e8a, #ff9a9e);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 45px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+
+        .video-container {
+            margin-top: 30px;
+        }
+
+        iframe {
+            width: 300px;
+            height: 530px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 30px;
+            background-color: white;
+            color: #ff4e8a;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feliz San Valentín ❤️</h1>
+    <p>Este video es para ti 💖</p>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/VXi33uUr-Ws" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <button onclick="mostrarMensaje()">Haz clic aquí 💌</button>
+
+    <script>
+        function mostrarMensaje() {
+            alert("Te amo muchísimo ❤️ Gracias por estar en mi vida 💕");
+        }
+    </script>
+
+</body>
+</html>
