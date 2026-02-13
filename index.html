@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Feliz San Valentín ❤️</title>
+    <title>¿Quieres ser mi San Valentín? ❤️</title>
     <style>
         body {
             margin: 0;
@@ -11,26 +11,18 @@
             font-family: Arial, sans-serif;
             text-align: center;
             color: white;
+            height: 100vh;
+            overflow: hidden;
         }
 
         h1 {
-            margin-top: 50px;
+            margin-top: 120px;
             font-size: 45px;
         }
 
-        p {
-            font-size: 22px;
-        }
-
-        .video-container {
-            margin-top: 30px;
-        }
-
-        iframe {
-            width: 300px;
-            height: 530px;
-            border-radius: 20px;
-            box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+        .botones {
+            margin-top: 40px;
+            position: relative;
         }
 
         button {
@@ -38,35 +30,44 @@
             font-size: 20px;
             border: none;
             border-radius: 30px;
-            background-color: white;
-            color: #ff4e8a;
             cursor: pointer;
-            margin-top: 25px;
+            margin: 10px;
             transition: 0.3s;
         }
 
-        button:hover {
-            transform: scale(1.1);
+        #si {
+            background-color: white;
+            color: #ff4e8a;
+        }
+
+        #no {
+            background-color: #ff2e63;
+            color: white;
+            position: absolute;
         }
     </style>
 </head>
 <body>
 
-    <h1>Feliz San Valentín ❤️</h1>
-    <p>Este video es para ti 💖</p>
+    <h1>💖 ¿Quieres ser mi San Valentín? 💖</h1>
 
-    <div class="video-container">
-        <iframe 
-            src="https://www.youtube.com/embed/VXi33uUr-Ws" 
-            allowfullscreen>
-        </iframe>
+    <div class="botones">
+        <button id="si" onclick="irAlVideo()">Sí ❤️</button>
+        <button id="no" onmouseover="moverBoton()">No 😢</button>
     </div>
 
-    <button onclick="mostrarMensaje()">Haz clic aquí 💌</button>
-
     <script>
-        function mostrarMensaje() {
-            alert("Te amo muchísimo ❤️ Gracias por estar en mi vida 💕");
+        function irAlVideo() {
+            window.location.href = "https://www.youtube.com/embed/VXi33uUr-Ws";
+        }
+
+        function moverBoton() {
+            const botonNo = document.getElementById("no");
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+
+            botonNo.style.left = x + "px";
+            botonNo.style.top = y + "px";
         }
     </script>
 
